@@ -18,13 +18,22 @@
 * avoid as more as you can super specific CSS selector
 * simple HTML structure - div containers are your friend!
 
+## Design informations
+* max width of the content: 1000px centered in the page
+* the web page must switch to the mobile version when the screen width is 480px or less.
+* links hover/active: #FF6565
+* button hover/active: opacity: 0.9
+
 ## Screenshots
-* Desktop design
+
+##### Desktop design
+
 ![Desktop UI design](/screenshots/headphones_desktop.png)
 
-* Tablet design
+##### Tablet design
+
 ![Tablet UI design](/screenshots/headphones_tablet.png)
 
-* Mobile design
-![Mobile UI design](/screenshots/headphones_mobile.png)
+##### Mobile design
 
+![Mobile UI design](/screenshots/headphones_mobile.png)
