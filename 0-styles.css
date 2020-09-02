@@ -205,7 +205,7 @@ header {
     }
 
     .small-nav {
-        display: block;
+        display: none;
         position: absolute;
         top: 10vh;
         right: 4rem;
@@ -228,9 +228,27 @@ header {
     }
 
     input#small-icon-btn:checked ~ .small-nav {
+        display: block;
+    }
+
+    input#small-icon-btn:checked ~ .hero-infos {
+        padding-top: 40rem;
+    }
+
+    input#small-icon-btn:checked ~ .small-icon-handler {
+        width: 2.25rem;
+        transform: rotate(45deg);
+    }
+
+    input#small-icon-btn:checked ~ .small-icon-handler::after {
         display: none;
     }
 
+    input#small-icon-btn:checked ~ .small-icon-handler::before {
+        margin-top: 0;
+        transform: rotate(90deg);
+        transition: transform .25s;
+    }
 }
 
 /* BUTTONS */
