@@ -1,3 +1,15 @@
+/* CUSTOM FONTS */
+
+@font-face {
+    font-family: 'Source sans pro';
+    src: url('./fonts/source-sans-pro/SourceSansPro-Regular.otf')
+}
+
+@font-face {
+    font-family: 'Spin Cycle';
+    src: url('./fonts/Spin-Cycle-OT/spincycle_ot.otf');
+}
+
 /* CSS VARIABLES */
 
 :root {
