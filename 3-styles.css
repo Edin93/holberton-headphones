@@ -518,7 +518,7 @@ header {
 }
 
 /* Results Section tablet UI layout (large screen) */
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 768px) {
     .pentagon-samples {
         display: flex;
         flex-direction: row;
