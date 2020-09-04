@@ -141,6 +141,9 @@
     /* SECTION */
     --desktop-section-wrapper-margins: 10rem auto;
     --desktop-section-description-margins: 5rem 6.5rem 8rem;
+
+    /* FORM */
+    --grey-border-color: #e4e6e8;
 }
 
 /* BASIC */
@@ -380,6 +383,9 @@ header {
     font-weight: bold;
     cursor: pointer;
     outline: none;
+}
+
+.hero-section .btn {
     box-shadow: var(--btn-box-shadow);
 }
 
@@ -542,3 +548,39 @@ header {
     }
 }
 
+/* Contact us section */
+.form-wrapper {
+    width: 34rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    margin: 5rem 0rem 1rem;
+}
+
+form label {
+    font-size: var(--small-text-font-size);
+    font-weight: 700;
+}
+
+form label, form input {
+    display: block;
+}
+
+form input {
+    border: none;
+    border-bottom: 1px solid var(--grey-border-color);
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+    outline: none;
+    font-size: var(--medium-title-size);
+}
+
+@media screen and (max-width: 340px) {
+    .form-wrapper {
+        width: 90%;
+        max-width: 90%;
+    }
+}
