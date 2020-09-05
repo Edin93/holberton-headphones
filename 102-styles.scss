@@ -1,0 +1,753 @@
+/* CUSTOM FONTS */
+
+@font-face {
+    font-family: 'Source sans pro';
+    src: url('./fonts/source-sans-pro/SourceSansPro-Regular.otf');
+  }
+  
+  @font-face {
+    font-family: 'Spin Cycle';
+    src: url('./fonts/Spin-Cycle-OT/spincycle_ot.otf');
+  }
+  
+  @font-face {
+    font-family: 'holberton_school-icon';
+    src: url('fonts/holberton_school-icon.eot?sq4eq4');
+    src: url('fonts/holberton_school-icon.eot?sq4eq4#iefix') format("embedded-opentype"), url('fonts/holberton_school-icon.ttf?sq4eq4') format("truetype"), url('fonts/holberton_school-icon.woff?sq4eq4') format("woff"), url('fonts/holberton_school-icon.svg?sq4eq4#holberton_school-icon') format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  .work-section {
+    [class^="holberton_school-icon-"], [class*=" holberton_school-icon-"] {
+      font-size: 15rem;
+      color: var(--red-color);
+    }
+  }
+  
+  [class^="holberton_school-icon-"], [class*=" holberton_school-icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'holberton_school-icon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .holberton_school-icon-arrow_1:before {
+    content: "\e900";
+  }
+  
+  .holberton_school-icon-arrow_2:before {
+    content: "\e901";
+  }
+  
+  .holberton_school-icon-arrow_3:before {
+    content: "\e902";
+  }
+  
+  .holberton_school-icon-arrow_4:before {
+    content: "\e903";
+  }
+  
+  .holberton_school-icon-arrow_5:before {
+    content: "\e904";
+  }
+  
+  .holberton_school-icon-check:before {
+    content: "\e905";
+  }
+  
+  .holberton_school-icon-ic_bag:before {
+    content: "\e906";
+  }
+  
+  .holberton_school-icon-ic_cart:before {
+    content: "\e907";
+  }
+  
+  .holberton_school-icon-ic_facebook:before {
+    content: "\e908";
+  }
+  
+  .holberton_school-icon-ic_hearing:before {
+    content: "\e909";
+  }
+  
+  .holberton_school-icon-ic_instagram:before {
+    content: "\e90a";
+  }
+  
+  .holberton_school-icon-ic_laptop:before {
+    content: "\e90b";
+  }
+  
+  .holberton_school-icon-ic_money:before {
+    content: "\e90c";
+  }
+  
+  .holberton_school-icon-ic_music:before {
+    content: "\e90d";
+  }
+  
+  .holberton_school-icon-ic_sound:before {
+    content: "\e90e";
+  }
+  
+  .holberton_school-icon-ic_twitter:before {
+    content: "\e90f";
+  }
+  
+  .holberton_school-icon-ic_video:before {
+    content: "\e910";
+  }
+  
+  .holberton_school-icon-menu:before {
+    content: "\e911";
+  }
+  
+  .holberton_school-icon-search_1:before {
+    content: "\e912";
+  }
+  
+  .holberton_school-icon-search_2:before {
+    content: "\e913";
+  }
+  
+  .holberton_school-icon-star:before {
+    content: "\e914";
+  }
+  
+  /* CSS VARIABLES */
+  
+  :root {
+    /* FONTS */
+    --font-family:'Source sans pro', 'Spin Cycle', 'holberton_school-icon', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --max-width:100rem;
+    --big-title-size:3.2rem;
+    --medium-title-size:1.8rem;
+    --small-title-size:1.5rem;
+    --medium-text-font-size:1.6rem;
+    --small-text-font-size:1.4rem;
+  
+    /* COLORS */
+    --red-color:#FF6565;
+    --back-color:#071629;
+    --white-color:#FFFFFF;
+  
+    /* LINKS */
+    --link-hover-color:var(--red-color);
+  
+    /* ELEMENTS PADDINGS & MARGINS */
+    --container-padding:2rem 3rem;
+    --title-icon-margin-left:4rem;
+  
+    /* BUTTONS */
+    --btn-display:block;
+    --btn-bg-color:var(--red-color);
+    --btn-text-color:var(--white-color);
+    --btn-padding:1.4rem 3rem;
+    --btn-margin:4rem auto;
+    --btn-hover-opacity:0.9;
+    --btn-border-radius:2.2rem;
+    --btn-box-shadow:10px 10px 50px 12px rgb(0 0 0 / 25%);
+  
+    /* SECTION */
+    --desktop-section-wrapper-margins:10rem auto;
+    --desktop-section-description-margins:5rem 6.5rem 8rem;
+  
+    /* FORM */
+    --grey-border-color:#e4e6e8;
+  }
+  
+  /* BASIC */
+  
+  * {
+    box-sizing: border-box;
+    font-family: var(--font-family);
+    line-height: 3.2rem;
+  
+    &::before, &::after {
+      box-sizing: border-box;
+      font-family: var(--font-family);
+      line-height: 3.2rem;
+    }
+  }
+  
+  html {
+    font-size: 62.5%;
+  }
+  
+  /* GENERAL */
+  
+  .container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--container-padding);
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  
+    &:active, &:hover {
+      color: var(--link-hover-color);
+    }
+  }
+  
+  /* HEADER */
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0rem;
+    right: 0;
+    left: 0;
+    margin: 1rem auto;
+    max-width: 120rem;
+    padding: 2rem 3rem;
+  }
+  
+  .small-icon-handler {
+    display: none;
+  }
+  
+  .logo {
+    width: 100%;
+  }
+  
+  .small-nav {
+    display: none;
+  }
+  
+  .nav ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .large-nav ul {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .nav ul li {
+    color: var(--white-color);
+    font-weight: bold;
+    font-size: var(--small-title-size);
+    margin-bottom: 0.8rem;
+  }
+  
+  header .nav ul li {
+    margin-left: var(--title-icon-margin-left);
+  }
+  
+  /* HERO SECTION */
+  
+  .hero-section {
+    background-image: url('./images/headphones_hero_1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .hero-infos {
+    padding: 40rem 18rem 12rem 18rem;
+    color: var(--white-color);
+  
+    div {
+      text-align: center;
+    }
+  }
+  
+  .hero-title {
+    font-size: var(--big-title-size);
+    font-weight: bold;
+  }
+  
+  .hero-subtitle {
+    font-size: var(--medium-text-font-size);
+    font-weight: bold;
+  }
+  
+  .hero-description {
+    font-size: var(--medium-text-font-size);
+  }
+  
+  @media screen and (max-width: 755px) and (min-width: 481px) {
+    .header {
+      padding: 2rem 1.25rem;
+    }
+  
+    header {
+      .logo-container {
+        width: 32%;
+      }
+  
+      .nav ul li {
+        font-size: 1.3rem;
+        margin-left: 2.5rem;
+      }
+    }
+  
+    .hero-infos {
+      padding: 40rem 5rem 12rem 5rem;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    header {
+      justify-content: center;
+  
+      .logo-container {
+        width: 16rem;
+        margin-left: 4rem;
+      }
+  
+      .large-nav {
+        display: none;
+      }
+    }
+  
+    .small-icon-handler {
+      display: block;
+      position: absolute;
+      top: 5rem;
+      left: 1.5rem;
+      height: 3px;
+      width: 1.5rem;
+      background-color: var(--white-color);
+      cursor: pointer;
+      transition: transform .1s;
+  
+      &::before {
+        content: '';
+        display: block;
+        border-top: 3px solid var(--white-color);
+        margin-top: -0.7rem;
+        width: 2.25rem;
+        transition: transform .1s;
+      }
+  
+      &::after {
+        content: '';
+        display: block;
+        border-top: 3px solid var(--white-color);
+        margin-top: 1.1rem;
+        width: 2.25rem;
+      }
+    }
+  
+    .hero-infos {
+      padding: 32rem 4rem 8rem 4rem;
+    }
+  
+    .small-nav {
+      display: none;
+      position: absolute;
+      top: 10vh;
+      right: 4rem;
+      left: 4rem;
+      margin: 2.5rem auto;
+      max-width: 100%;
+      padding: 1rem 2rem;
+      text-align: center;
+  
+      ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+  
+        li {
+          margin-left: 0rem;
+          font-size: var(--medium-title-size);
+        }
+      }
+    }
+  
+    input#small-icon-btn:checked ~ {
+      .small-nav {
+        display: block;
+      }
+  
+      .hero-infos {
+        padding-top: 40rem;
+      }
+  
+      .small-icon-handler {
+        width: 2.25rem;
+        transform: rotate(45deg);
+  
+        &::after {
+          display: none;
+        }
+  
+        &::before {
+          margin-top: 0;
+          transform: rotate(90deg);
+          transition: transform .1s;
+        }
+      }
+    }
+  
+    .section-title {
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+  
+  /* BUTTONS */
+  
+  #small-icon-btn {
+    display: none;
+  }
+  
+  .btn {
+    display: var(--btn-display);
+    font-size: var(--small-text-font-size);
+    padding: var(--btn-padding);
+    margin: var(--btn-margin);
+    color: var(--btn-text-color);
+    background-color: var(--btn-bg-color);
+    border: none;
+    border-radius: var(--btn-border-radius);
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .hero-section .btn {
+    box-shadow: var(--btn-box-shadow);
+  }
+  
+  .btn:hover {
+    opacity: var(--btn-hover-opacity);
+  }
+  
+  /* WORK SECTION */
+  
+  .section-wrapper {
+    margin: var(--desktop-section-wrapper-margins);
+    max-width: var(--max-width);
+  }
+  
+  .section-title {
+    font-size: var(--big-title-size);
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .section-description {
+    font-size: var(--medium-text-font-size);
+    margin: var(--desktop-section-description-margins);
+    text-align: center;
+  }
+  
+  .section-description-content {
+    max-width: 65rem;
+    margin: 0 auto;
+  }
+  
+  .section-samples {
+    margin: 8rem 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .section-sample {
+    max-width: 18rem;
+    margin: 4rem 0rem;
+    text-align: center;
+  }
+  
+  .section-sample-icon {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .section-sample-name {
+    font-size: var(--medium-title-size);
+    font-weight: bold;
+    margin: 2rem;
+  }
+  
+  .section-sample-description {
+    font-size: var(--small-text-font-size);
+    margin: 2rem;
+  }
+  
+  /* What we do SECTION MOBILE LAYLOUT */
+  
+  @media screen and (max-width: 768px) {
+    .section-description {
+      margin: 5rem;
+    }
+  
+    .section-samples {
+      justify-content: center;
+    }
+  
+    .section-sample {
+      width: 40%;
+      max-width: 50%;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .section-samples {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .section-sample {
+      width: 70%;
+      max-width: 70%;
+    }
+  }
+  
+  /* Results SECTION  */
+  
+  .results-section {
+    color: var(--white-color);
+    padding: 1px 0;
+    background-image: url('./images/headphones_hero_2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  /* Results Section tablet UI layout (large screen) */
+  @media screen and (max-width: 768px) {
+    .pentagon-samples {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      max-width: var(--max-width);
+      flex-wrap: wrap;
+      width: 70%;
+      margin: auto;
+    }
+  
+    .section-sample {
+      min-width: 50%;
+    }
+  }
+  
+  /* Results Section tablet UI layout (small screen) */
+  @media screen and (max-width: 620px) {
+    .pentagon-samples {
+      width: 90%;
+    }
+  }
+  
+  /* Results Section mobile UI layout */
+  @media screen and (max-width: 480px) {
+    .pentagon-samples {
+      width: 100%;
+    }
+  }
+  
+  /* Contact us section */
+  
+  .form-wrapper {
+    width: 34rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+  
+  form {
+    margin: 5rem 0rem 1rem;
+  
+    label {
+      font-size: var(--small-text-font-size);
+      font-weight: 700;
+      display: block;
+    }
+  
+    input {
+      display: block;
+      border: none;
+      border-bottom: 1px solid var(--grey-border-color);
+      max-width: 100%;
+      margin-bottom: 1.5rem;
+      outline: none;
+      font-size: var(--medium-title-size);
+    }
+  }
+  
+  @media screen and (max-width: 340px) {
+    .form-wrapper {
+      width: 90%;
+      max-width: 90%;
+    }
+  }
+  
+  /* Footer */
+  
+  footer {
+    background-color: var(--back-color);
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .footer-content {
+    padding: 2rem 3rem;
+    width: 100%;
+    max-width: 106rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .social-icons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  
+    span {
+      margin-left: 3rem;
+    }
+  }
+  
+  .footer-content {
+    [class^="holberton_school-icon-"], [class*=" holberton_school-icon-"] {
+      font-size: 3rem;
+      color: var(--white-color);
+    }
+  }
+  
+  .copyrights {
+    font-size: var(--medium-text-font-size);
+    color: white;
+    opacity: .35;
+  }
+  
+  @media screen and (max-width: 480px) {
+    footer .logo {
+      width: 17rem;
+    }
+  
+    .footer-content {
+      flex-direction: column;
+      padding-bottom: 0;
+    }
+  
+    .nav ul li {
+      margin-bottom: 0;
+    }
+  
+    .social-icons-container span {
+      margin: 0 2rem;
+    }
+  }
+  
+  /* PENTAGON SHAPE */
+  
+  /* .section-pentagon-container {
+      height: 17rem;
+      width: 18rem;
+      position: relative;
+  } */
+  
+  .pentagon-samples {
+    margin-top: 6rem;
+  }
+  
+  .pentagon {
+    height: 0;
+    width: 17rem;
+    border-top: 10rem solid var(--red-color);
+    border-left: 4rem solid transparent;
+    border-right: 4rem solid transparent;
+    position: relative;
+  
+    &::after {
+      position: absolute;
+      content: '';
+      height: 0;
+      width: 0rem;
+      border-bottom: 7rem solid var(--red-color);
+      border-left: 8.5rem solid transparent;
+      border-right: 8.5rem solid transparent;
+      left: -4rem;
+      top: -17rem;
+    }
+  }
+  
+  .pentagon-title {
+    position: absolute;
+    top: -9.5rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-size: 5rem;
+    font-weight: 600;
+  }
+  
+  .pentagon-description {
+    position: absolute;
+    top: -5.5rem;
+    left: 50%;
+    font-size: 13px;
+    font-weight: 600;
+    transform: translate(-50%, 0);
+    width: 12rem;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .results-section .pentagon {
+      margin: 5rem auto;
+    }
+  }
+  
+  /* ADDITIONAL ANIMATIONS */
+  
+  .work-section .section-sample:hover {
+    border: 1px solid lightgrey;
+    border-radius: 2rem;
+    box-shadow: 2rem 2rem 3rem -1rem grey;
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+  
+  @keyframes shake {
+    0% {
+      transform: translate(-50%, 0) rotate(6deg);
+    }
+  
+    25% {
+      transform: translate(-50%, 0) rotate(-6deg);
+    }
+  
+    50% {
+      transform: translate(-50%, 0) rotate(6deg);
+    }
+  
+    75% {
+      transform: translate(-50%, 0) rotate(-6deg);
+    }
+  
+    100% {
+      transform: translate(-50%, 0) rotate(6deg);
+    }
+  }
+  
+  .pentagon-title {
+    transform-origin: center;
+    animation: 3s ease-in 1s infinite reverse both running shake;
+  }
+  
