@@ -500,35 +500,6 @@ header .nav ul li {
     background-size: cover;
 }
 
-.section-pentagon-container {
-    height: 17rem;
-    position: relative;
-}
-
-.section-pentagon-container img {
-    height: inherit;
-    width: inherit;
-}
-
-.pentagon-title {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, 0);
-    font-size: 5rem;
-    font-weight: 600;
-}
-
-.pentagon-description {
-    position: absolute;
-    top: 68%;
-    left: 50%;
-    font-size: 13px;
-    font-weight: 600;
-    transform: translate(-50%, 0);
-    width: 100%;
-}
-
 /* Results Section tablet UI layout (large screen) */
 @media screen and (max-width: 768px) {
     .pentagon-samples {
@@ -655,5 +626,63 @@ footer {
 
     .social-icons-container span {
         margin: 0 2rem;
+    }
+}
+
+/* PENTAGON SHAPE */
+
+/* .section-pentagon-container {
+    height: 17rem;
+    width: 18rem;
+    position: relative;
+} */
+
+.pentagon-samples {
+    margin-top: 6rem;
+}
+
+.pentagon {
+    height: 0;
+    width: 17rem;
+    border-top: 10rem solid var(--red-color);
+    border-left: 4rem solid transparent;
+    border-right: 4rem solid transparent;
+    position: relative;
+}
+  
+.pentagon::after {
+    position: absolute;
+    content: '';
+    height: 0;
+    width: 0rem;
+    border-bottom: 7rem solid var(--red-color);
+    border-left: 8.5rem solid transparent;
+    border-right: 8.5rem solid transparent;
+    left: -4rem;
+    top: -17rem;
+}
+
+.pentagon-title {
+    position: absolute;
+    top: -9.5rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-size: 5rem;
+    font-weight: 600;
+}
+
+.pentagon-description {
+    position: absolute;
+    top: -5.5rem;
+    left: 50%;
+    font-size: 13px;
+    font-weight: 600;
+    transform: translate(-50%, 0);
+    width: 12rem;
+}
+
+@media screen and (max-width: 768px) {
+    .results-section .pentagon {
+        margin: 5rem auto;
     }
 }
