@@ -32,7 +32,7 @@
 - There's no installation needed to use this project. You just have to download the zip file of the project or clone the project and open it on the browser.
 
 ## Clone
-`git clone https://github.com/Edin93/holberton-smiling-school-javascript.git`
+`git clone https://github.com/Edin93/holberton-headphones.git`
 
 ## Requirements
 * We must work only with pure HTML and CSS.
